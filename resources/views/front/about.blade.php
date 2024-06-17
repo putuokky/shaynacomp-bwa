@@ -32,9 +32,7 @@
                                     <div class="flex w-6 h-6 shrink-0">
                                         <img src="assets/icons/tick-circle.svg" alt="icon">
                                     </div>
-                                    <p class="leading-[26px] font-semibold">Commit to delivering the highest quality in
-                                        every
-                                        project. Set the standard for excellence world</p>
+                                    <p class="leading-[26px] font-semibold">{{ $keypoint->keypoint }}</p>
                                 </div>
                             @empty
                             @endforelse

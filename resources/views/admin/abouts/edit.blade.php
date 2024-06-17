@@ -9,7 +9,17 @@
         <div class="max-w-3xl mx-auto sm:px-6 lg:px-8">
             <div class="p-10 overflow-hidden bg-white shadow-sm sm:rounded-lg">
 
-                <form method="POST" action=" " enctype="multipart/form-data">
+                @if ($errors->any())
+                    @foreach ($errors->all() as $error)
+                        <div class="w-full py-3 text-white bg-red-500 rounded-3xl">
+                            {{ $error }}
+                        </div>
+                    @endforeach
+                @endif
+
+                <form method="POST" action="{{ route('admin.abouts.update', $about) }}" enctype="multipart/form-data">
+                    @csrf
+                    @method('PUT')
                     <div>
                         <x-input-label for="name" :value="__('Name')" />
                         <x-text-input id="name" class="block w-full mt-1" type="text" name="name"
