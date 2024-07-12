@@ -18,7 +18,8 @@
         @forelse ($abouts as $about)
             <div class="product flex flex-wrap justify-center items-center gap-[60px] even:flex-row-reverse">
                 <div class="w-[470px] h-[550px] flex shrink-0 overflow-hidden">
-                    <img src="{{ Storage::url($about->thumbnail) }}" class="object-contain w-full h-full" alt="thumbnail">
+                    <img src="{{ asset(Storage::url($about->thumbnail)) }}" class="object-contain w-full h-full"
+                        alt="thumbnail">
                 </div>
                 <div class="flex flex-col gap-[30px] py-[50px] h-fit max-w-[500px]">
                     <p
@@ -108,7 +109,7 @@
                 @forelse ($statistics as $statistic)
                     <div class="card w-[200px] flex flex-col items-center gap-[10px] text-center">
                         <div class="w-[55px] h-[55px] flex shrink-0 overflow-hidden">
-                            <img src="{{ Storage::url($statistic->icon) }}" class="object-contain w-full h-full"
+                            <img src="{{ asset(Storage::url($statistic->icon)) }}" class="object-contain w-full h-full"
                                 alt="icon">
                         </div>
                         <p class="text-cp-pale-orange font-bold text-4xl leading-[54px]">{{ $statistic->goal }}</p>

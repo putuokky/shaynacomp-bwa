@@ -32,7 +32,7 @@
                 </div>
         </div>
         <div class="absolute w-[43%] h-full top-0 right-0 overflow-hidden z-0">
-            <img src="{{ Storage::url($hero->banner) }}" class="object-cover w-full h-full" alt="banner">
+            <img src="{{ asset(Storage::url($hero->banner)) }}" class="object-cover w-full h-full" alt="banner">
         </div>
     @empty
         @endforelse
@@ -111,12 +111,12 @@
                 <div
                     class="card w-[356.67px] flex flex-col bg-white border border-[#E8EAF2] rounded-[20px] gap-[30px] overflow-hidden hover:border-cp-dark-blue transition-all duration-300">
                     <div class="thumbnail h-[200px] flex shrink-0 overflow-hidden">
-                        <img src="{{ Storage::url($principle->thumbnail) }}"
+                        <img src="{{ asset(Storage::url($principle->thumbnail)) }}"
                             class="object-cover object-center w-full h-full" alt="thumbnails">
                     </div>
                     <div class="flex flex-col p-[0_30px_30px_30px] gap-5">
                         <div class="w-[55px] h-[55px] flex shrink-0 overflow-hidden">
-                            <img src="{{ Storage::url($principle->icon) }}" class="object-contain w-full h-full"
+                            <img src="{{ asset(Storage::url($principle->icon)) }}" class="object-contain w-full h-full"
                                 alt="icon">
                         </div>
                         <div class="flex flex-col gap-1">
@@ -137,7 +137,7 @@
                 @forelse ($statistics as $statistic)
                     <div class="card w-[200px] flex flex-col items-center gap-[10px] text-center">
                         <div class="w-[55px] h-[55px] flex shrink-0 overflow-hidden">
-                            <img src="{{ Storage::url($statistic->icon) }}" class="object-contain w-full h-full"
+                            <img src="{{ asset(Storage::url($statistic->icon)) }}" class="object-contain w-full h-full"
                                 alt="icon">
                         </div>
                         <p class="text-cp-pale-orange font-bold text-4xl leading-[54px]">{{ $statistic->goal }}</p>
@@ -153,7 +153,7 @@
         @forelse ($products as $product)
             <div class="product flex flex-wrap justify-center items-center gap-[60px] even:flex-row-reverse">
                 <div class="w-[470px] h-[550px] flex shrink-0 overflow-hidden">
-                    <img src="{{ Storage::url($product->thumbnail) }}" class="object-contain w-full h-full"
+                    <img src="{{ asset(Storage::url($product->thumbnail)) }}" class="object-contain w-full h-full"
                         alt="thumbnail">
                 </div>
                 <div class="flex flex-col gap-[30px] py-[50px] h-fit max-w-[500px]">
@@ -189,7 +189,7 @@
                         <div
                             class="w-[100px] h-[100px] flex shrink-0 items-center justify-center rounded-full bg-[linear-gradient(150.55deg,_#007AFF_8.72%,_#312ECB_87.11%)]">
                             <div class="w-[90px] h-[90px] rounded-full overflow-hidden">
-                                <img src="{{ Storage::url($team->avatar) }}"
+                                <img src="{{ asset(Storage::url($team->avatar)) }}"
                                     class="object-cover object-center w-full h-full" alt="photo">
                             </div>
                         </div>
@@ -237,7 +237,7 @@
                     <div class="testimonial-container flex flex-col gap-[112px] w-[565px]">
                         <div class="flex flex-col gap-[30px]">
                             <div class="overflow-hidden h-9">
-                                <img src="{{ Storage::url($testimonial->client->logo) }}" class="object-contain"
+                                <img src="{{ asset(Storage::url($testimonial->client->logo)) }}" class="object-contain"
                                     alt="icon">
                             </div>
                             <div class="relative pt-[27px] pl-[30px]">
@@ -250,7 +250,7 @@
                             <div class="flex items-center justify-between pl-[30px]">
                                 <div class="flex items-center gap-6">
                                     <div class="w-[60px] h-[60px] flex shrink-0 rounded-full overflow-hidden">
-                                        <img src="{{ Storage::url($testimonial->client->avatar) }}"
+                                        <img src="{{ asset(Storage::url($testimonial->client->avatar)) }}"
                                             class="object-cover w-full h-full" alt="photo">
                                     </div>
                                     <div class="flex flex-col justify-center gap-1">
@@ -281,7 +281,7 @@
                         </div>
                     </div>
                     <div class="testimonial-thumbnail w-[470px] h-[550px] rounded-[20px] overflow-hidden bg-[#D9D9D9]">
-                        <img src="{{ Storage::url($testimonial->thumbnail) }}"
+                        <img src="{{ asset(Storage::url($testimonial->thumbnail)) }}"
                             class="object-cover object-center w-full h-full" alt="thumbnail">
                     </div>
                 </div>

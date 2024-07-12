@@ -215,7 +215,7 @@
                     <div class="testimonial-container flex flex-col gap-[112px] w-[565px]">
                         <div class="flex flex-col gap-[30px]">
                             <div class="overflow-hidden h-9">
-                                <img src="{{ Storage::url($testimonial->client->logo) }}" class="object-contain"
+                                <img src="{{ asset(Storage::url($testimonial->client->logo)) }}" class="object-contain"
                                     alt="icon">
                             </div>
                             <div class="relative pt-[27px] pl-[30px]">
@@ -228,7 +228,7 @@
                             <div class="flex items-center justify-between pl-[30px]">
                                 <div class="flex items-center gap-6">
                                     <div class="w-[60px] h-[60px] flex shrink-0 rounded-full overflow-hidden">
-                                        <img src="{{ Storage::url($testimonial->client->avatar) }}"
+                                        <img src="{{ asset(Storage::url($testimonial->client->avatar)) }}"
                                             class="object-cover w-full h-full" alt="photo">
                                     </div>
                                     <div class="flex flex-col justify-center gap-1">
@@ -259,7 +259,7 @@
                         </div>
                     </div>
                     <div class="testimonial-thumbnail w-[470px] h-[550px] rounded-[20px] overflow-hidden bg-[#D9D9D9]">
-                        <img src="{{ Storage::url($testimonial->thumbnail) }}"
+                        <img src="{{ asset(Storage::url($testimonial->thumbnail)) }}"
                             class="object-cover object-center w-full h-full" alt="thumbnail">
                     </div>
                 </div>

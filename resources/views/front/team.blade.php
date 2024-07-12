@@ -24,7 +24,7 @@
                         <div
                             class="w-[100px] h-[100px] flex shrink-0 items-center justify-center rounded-full bg-[linear-gradient(150.55deg,_#007AFF_8.72%,_#312ECB_87.11%)]">
                             <div class="w-[90px] h-[90px] rounded-full overflow-hidden">
-                                <img src="{{ Storage::url($team->avatar) }}"
+                                <img src="{{ asset(Storage::url($team->avatar)) }}"
                                     class="object-cover object-center w-full h-full" alt="photo">
                             </div>
                         </div>
@@ -50,7 +50,7 @@
                 @forelse ($statistics as $statistic)
                     <div class="card w-[200px] flex flex-col items-center gap-[10px] text-center">
                         <div class="w-[55px] h-[55px] flex shrink-0 overflow-hidden">
-                            <img src="{{ Storage::url($statistic->icon) }}" class="object-contain w-full h-full"
+                            <img src="{{ asset(Storage::url($statistic->icon)) }}" class="object-contain w-full h-full"
                                 alt="icon">
                         </div>
                         <p class="text-cp-pale-orange font-bold text-4xl leading-[54px]">{{ $statistic->goal }}</p>
